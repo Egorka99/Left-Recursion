@@ -58,9 +58,19 @@
     </recent_temporary>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/lre/src/LeftRecursionElimination.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="grammarWithoutDirectLR.get(i).getRules()" />
+        <watch expression="grammarWithoutDirectLR" language="JAVA" />
+        <watch expression="grammarWithoutLR" />
       </configuration>
     </watches-manager>
   </component>

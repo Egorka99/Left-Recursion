@@ -46,6 +46,7 @@ public class LeftRecursionElimination {
                 int length = grammarWithoutDirectLR.get(i).getRules().size();
                 for (int k = 0; k < length; k++) {
                     String rule = grammarWithoutDirectLR.get(i).getRules().get(k);
+                    if (rule.contains("'")) continue;
                     if (rule.startsWith(grammarWithoutDirectLR.get(j).getLeftNonTerminal())) {
                         grammarWithoutDirectLR.get(i).getRules().remove(rule);
                         for (int m = 0; m < grammarWithoutDirectLR.get(j).getRules().size(); m++) {
@@ -53,8 +54,6 @@ public class LeftRecursionElimination {
                         }
                     }
                 }
-
-
             }
 
             for (CFG cfg : grammarWithoutDirectLR) {
@@ -80,6 +79,8 @@ public class LeftRecursionElimination {
         rule3.addRule("Sb");
 
         LeftRecursionElimination lre = new LeftRecursionElimination(new CFG[]{rule1, rule2, rule3});
+
+
 
         for (CFG cfg : lre.leftRecursionElimination()) {
             System.out.print(cfg.getLeftNonTerminal() + "-> ");
