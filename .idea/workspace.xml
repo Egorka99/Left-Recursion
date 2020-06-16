@@ -17,6 +17,7 @@
   </component>
   <component name="ProjectId" id="1dOeIkKlKmDeuKJF2Qm26rdyz1R" />
   <component name="PropertiesComponent">
+    <property name="ToolWindowCoverage.ShowToolbar" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="14" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -59,8 +60,11 @@
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="Application">
-        <watch expression="directLREliminate(rule)" />
+        <watch expression="grammarWithoutDirectLR.get(i).getRules()" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Left_Recursion$LeftRecursionElimination.ic" NAME="LeftRecursionElimination Coverage Results" MODIFIED="1592315919711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

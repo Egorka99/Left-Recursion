@@ -9,8 +9,6 @@ public class CFG {
         this.rules = rules;
     }
 
-    public CFG() {
-    }
 
     public String getLeftNonTerminal() {
         return leftNonTerminal;
@@ -18,14 +16,6 @@ public class CFG {
 
     public List<String> getRules() {
         return rules;
-    }
-
-    public void setLeftNonTerminal(String leftNonTerminal) {
-        this.leftNonTerminal = leftNonTerminal;
-    }
-
-    public void setRules(List<String> rules) {
-        this.rules = rules;
     }
 
     public void addRule(String rule) {
