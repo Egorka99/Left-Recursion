@@ -18,8 +18,8 @@ public class LeftRecursionElimination {
             return new CFG[]{rule};
         }
 
-        List<String> alphas = rule.getRules().stream().filter(r -> r.startsWith("A")).collect(Collectors.toList());
-        List<String> betas = rule.getRules().stream().filter(r -> !r.startsWith("A")).collect(Collectors.toList());
+        List<String> alphas = rule.getRules().stream().filter(r -> r.startsWith(rule.getLeftNonTerminal())).collect(Collectors.toList());
+        List<String> betas = rule.getRules().stream().filter(r -> !r.startsWith(rule.getLeftNonTerminal())).collect(Collectors.toList());
 
         CFG startNonTerminalRule = new CFG(rule.getLeftNonTerminal(), new ArrayList<>());
 
@@ -36,7 +36,7 @@ public class LeftRecursionElimination {
 
 
     public static void main(String[] args) {
-        CFG rule = new CFG("A", Arrays.asList("Sa", "Aa"));
+        CFG rule = new CFG("B", Arrays.asList("Sa", "Ab"));
         CFG rule2 = new CFG("S", Collections.singletonList("Ab"));
 
         for (CFG cfg : directLREliminate(rule)) {
@@ -45,11 +45,11 @@ public class LeftRecursionElimination {
             System.out.println();
         }
 
-        for (CFG cfg : directLREliminate(rule2)) {
-            System.out.print(cfg.getLeftNonTerminal() + "-> ");
-            cfg.getRules().forEach(r -> System.out.print(r + "|"));
-            System.out.println();
-        }
+//        for (CFG cfg : directLREliminate(rule2)) {
+//            System.out.print(cfg.getLeftNonTerminal() + "-> ");
+//            cfg.getRules().forEach(r -> System.out.print(r + "|"));
+//            System.out.println();
+//        }
 
 
     }
