@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,7 +33,7 @@ public class LeftRecursionElimination {
 
     }
 
-    public CFG[] leftRecursionElimination() {
+    public CFG[] leftRecursionEliminate() {
         List<CFG> grammarWithoutDirectLR = new ArrayList<>();
         List<CFG> grammarWithoutLR = new ArrayList<>();
         for (CFG cfg : grammar) {
@@ -67,28 +66,25 @@ public class LeftRecursionElimination {
     }
 
 
-    public static void main(String[] args) {
-        CFG rule1 = new CFG("S", new ArrayList<>());
-        rule1.addRule("Sa");
-        rule1.addRule("Ab");
-        CFG rule2 = new CFG("A", new ArrayList<>());
-        rule2.addRule("BA");
-        rule2.addRule("a");
-        CFG rule3 = new CFG("B", new ArrayList<>());
-        rule3.addRule("aA");
-        rule3.addRule("Sb");
-
-        LeftRecursionElimination lre = new LeftRecursionElimination(new CFG[]{rule1, rule2, rule3});
-
-
-
-        for (CFG cfg : lre.leftRecursionElimination()) {
-            System.out.print(cfg.getLeftNonTerminal() + "-> ");
-            cfg.getRules().forEach(r -> System.out.print(r + "|"));
-            System.out.println();
-        }
-
-
-    }
+//    public static void main(String[] args) {
+//        CFG rule1 = new CFG("S", new ArrayList<>());
+//        rule1.addRule("Sa");
+//        rule1.addRule("Ab");
+//        CFG rule2 = new CFG("A", new ArrayList<>());
+//        rule2.addRule("BA");
+//        rule2.addRule("a");
+//        CFG rule3 = new CFG("B", new ArrayList<>());
+//        rule3.addRule("aA");
+//        rule3.addRule("Sb");
+//
+//        LeftRecursionElimination lre = new LeftRecursionElimination(new CFG[]{rule1, rule2, rule3});
+//
+//
+//        for (CFG cfg : lre.leftRecursionEliminate()) {
+//            System.out.print(cfg.getLeftNonTerminal() + "-> ");
+//            cfg.getRules().forEach(r -> System.out.print(r + "|"));
+//            System.out.println();
+//        }
+//    }
 
 }

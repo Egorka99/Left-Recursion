@@ -1,0 +1,5 @@
+S-> AbS'|Ab|
+S'-> aS'|a|
+A-> BA|a|
+B-> aAB'|AbS'bB'|abbB'|aA|AbS'b|abb|
+B'-> AbbB'|Abb|

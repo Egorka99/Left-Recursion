@@ -35,7 +35,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LeftRecursionElimination">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="lre" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HelloWorld" />
       <module name="lre" />
@@ -50,27 +57,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.HelloWorld" />
+      <item itemvalue="Application.LeftRecursionElimination" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.LeftRecursionElimination" />
         <item itemvalue="Application.HelloWorld" />
       </list>
     </recent_temporary>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/lre/src/LeftRecursionElimination.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="grammarWithoutDirectLR" language="JAVA" />
-        <watch expression="grammarWithoutLR" />
+        <watch expression="grammarWithoutDirectLR.get(i).getRules()" />
+        <watch expression="rule" />
+        <watch expression="grammarWithoutDirectLR.get(j).getLeftNonTerminal()" />
       </configuration>
     </watches-manager>
   </component>
